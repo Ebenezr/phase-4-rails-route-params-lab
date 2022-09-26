@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
        Student.all
     end  
      
-    render json: students
+    render json: students, only: [:first_name, :last_name, :grade] 
   end
   
   def show
